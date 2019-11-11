@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
 	<meta charset="UTF-8" />
@@ -318,14 +318,16 @@
 	<script src="js/parallax.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			// search on the website to find a js code to handle click on paging links
+			// write jquery code to handle click on paging links
 			$('.tm-paging-link').click(function(e){
 				e.preventDefault();
-				
+				//get link name
 				var page = $(this).text().toLowerCase();
 				$('.tm-gallery-page').addClass('hidden');
+				//remove hidden from the page with that link 
 				$('#tm-gallery-page-' + page).removeClass('hidden');
 				$('.tm-paging-link').removeClass('active');
+				//give active to the link we click
 				$(this).addClass("active");
 			});
 		});
